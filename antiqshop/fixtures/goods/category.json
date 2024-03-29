@@ -1,0 +1,58 @@
+[
+{
+  "model": "goods.category",
+  "pk": 1,
+  "fields": {
+    "name": "Все товары",
+    "slug": "goods"
+  }
+},
+{
+  "model": "goods.category",
+  "pk": 2,
+  "fields": {
+    "name": "Рисунки",
+    "slug": "risunki"
+  }
+},
+{
+  "model": "goods.category",
+  "pk": 3,
+  "fields": {
+    "name": "Картины",
+    "slug": "kartiny"
+  }
+},
+{
+  "model": "goods.category",
+  "pk": 4,
+  "fields": {
+    "name": "Почтовые карточки",
+    "slug": "pochtovye-kartochki"
+  }
+},
+{
+  "model": "goods.category",
+  "pk": 5,
+  "fields": {
+    "name": "Фотографии",
+    "slug": "fotografii"
+  }
+},
+{
+  "model": "goods.category",
+  "pk": 6,
+  "fields": {
+    "name": "Пластинки",
+    "slug": "plastinki"
+  }
+},
+{
+  "model": "goods.category",
+  "pk": 7,
+  "fields": {
+    "name": "Фотоаппараты",
+    "slug": "fotoapparaty"
+  }
+}
+]

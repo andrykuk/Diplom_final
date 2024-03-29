@@ -1,0 +1,254 @@
+[
+{
+  "model": "goods.products",
+  "pk": 1,
+  "fields": {
+    "name": "Акварель. Подлинник. Автор - Максимилиан Волошин",
+    "slug": "akvarel-podlinnik-avtor-maksimilian-voloshin",
+    "description": "Акварель. Подлинник. Автор - Максимилиан Волошин. Ранее не известная акварель Максимилиана Волошина. Место создания. Крым. Возможно Симферополь. История создания - оплата за проживание в частном доме-гостинице.",
+    "image": "goods_images/Voloshin.jpg",
+    "price": "200000.00",
+    "discount": "1000.00",
+    "quantity": 1,
+    "category": 2
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 2,
+  "fields": {
+    "name": "Пасхальный заяц",
+    "slug": "pashalnyj-zayac",
+    "description": "Почтовая карточка. С надписями и поздравлениями. Годы - 1910-е годы.",
+    "image": "goods_images/Carte_Postale_-_1910year.jpg",
+    "price": "1100.00",
+    "discount": "200.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 3,
+  "fields": {
+    "name": "Обнаженная русалка",
+    "slug": "naked-mermaid",
+    "description": "Почтовая карточка. Обнаженная русалка. Черно-белая. Производство -  UNION POSTALE UNIVERSELLE. Дата - 1910 годы",
+    "image": "goods_images/UNION_POSTALE.jpg",
+    "price": "1200.00",
+    "discount": "150.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 4,
+  "fields": {
+    "name": "Пасхальный заяц с зонтиком",
+    "slug": "pashalnyj-zayac-s-zontikom",
+    "description": "Почтовая карточка. Цветная. Пасхальный заяц в виде яйца, в руках зонтик. Дата - 1910е годы.",
+    "image": "goods_images/Post_card-1910year.jpg",
+    "price": "1500.00",
+    "discount": "300.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 5,
+  "fields": {
+    "name": "Девушка с цветами и голубем",
+    "slug": "devushka-s-cvetam-i-golubem",
+    "description": "Почтовая карточка. Цветная. Девушка с цветами и голубем. У девушки возможен гастрит. Дата - 1912 год",
+    "image": "goods_images/Post_card-1912year.jpg",
+    "price": "1050.00",
+    "discount": "250.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 6,
+  "fields": {
+    "name": "Девочка с кошкой",
+    "slug": "devochka-s-koshkoj",
+    "description": "Почтовая карточка. Девочка с кошкой. Черно-белая карточка. Почтовая карточка из Неаполя. Задняя сторона заполненная.",
+    "image": "goods_images/Postcard-Nupoli-1902.jpg",
+    "price": "2200.00",
+    "discount": "400.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 7,
+  "fields": {
+    "name": "Мальчик с ветками",
+    "slug": "malchik-s-vetkami",
+    "description": "Почтовая открытка. Цветная. Авторство - A.Noyer,Rueil,Paris(Fabrication Francaise). Годы - 1910-е годы.",
+    "image": "goods_images/A.Noyer_Rueil_Paris.jpg",
+    "price": "2050.00",
+    "discount": "400.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 8,
+  "fields": {
+    "name": "Пасха. Мальчик, девочка, курица, яйца.",
+    "slug": "pasha-malchik-devochka-kurica-yajca",
+    "description": "Почтовая карточка. Поздравление с Пасхой. Цветная. Заполненная. Год - 1910.",
+    "image": "goods_images/Postcard_Pasha-1910.jpg",
+    "price": "2500.00",
+    "discount": "500.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 9,
+  "fields": {
+    "name": "Поздравление с Новым Годом",
+    "slug": "pozdravlenie-s-novym-godom",
+    "description": "Почтовая карточка. Цветная. Заполненная. Год - 1909.",
+    "image": "goods_images/Postcard_New_year-_1909.jpg",
+    "price": "2120.00",
+    "discount": "150.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 10,
+  "fields": {
+    "name": "Девочка и корзина цветов.",
+    "slug": "devochka-i-korzina-cvetov",
+    "description": "Почтовая карточка. Поздравление с Новым годом. Цветная. Заполненная. Год - 1913 год.",
+    "image": "goods_images/Postcard_New_year-1913.jpg",
+    "price": "2300.00",
+    "discount": "200.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 11,
+  "fields": {
+    "name": "Девочка и ягнята",
+    "slug": "devochka-i-yagnyata",
+    "description": "Почтовая карточка. Цветная. Поздравления с Пасхой. Год - 1910 годы.",
+    "image": "goods_images/Postcard_MC.jpg",
+    "price": "2000.00",
+    "discount": "250.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 12,
+  "fields": {
+    "name": "Мальчик с санками и собакой",
+    "slug": "malchik-s-sankami-i-sobakoj",
+    "description": "Почтовая карточка. Цветная. Поздравление с Рождеством. Годы - 1910-е годы.",
+    "image": "goods_images/Postcard_MC-1902.jpg",
+    "price": "2600.00",
+    "discount": "300.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 13,
+  "fields": {
+    "name": "Гувернантка и ученица",
+    "slug": "guvernantka-i-uchenica",
+    "description": "Почтовая карточка. Черно-белая. Фото - художник A.L.Vernon. Год - 1915 год.",
+    "image": "goods_images/Postcard_A.L.Vernon-1915.jpg",
+    "price": "2700.00",
+    "discount": "140.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 14,
+  "fields": {
+    "name": "Двое на воздушном шаре",
+    "slug": "dvoe-na-vozdushnom-share",
+    "description": "Почтовая карточка. Поздравления с Новым Годом. Цветная. Заполненная. Год - 1911 год.",
+    "image": "goods_images/Postcard-1911.jpg",
+    "price": "2002.00",
+    "discount": "300.00",
+    "quantity": 1,
+    "category": 4
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 15,
+  "fields": {
+    "name": "Красивая картина",
+    "slug": "krasivaya-kartina",
+    "description": "Просто картина для примера работы",
+    "image": "",
+    "price": "5000.00",
+    "discount": "0.00",
+    "quantity": 1,
+    "category": 3
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 16,
+  "fields": {
+    "name": "Арба в Турции",
+    "slug": "arba-v-turcii",
+    "description": "Фотография. Оригинал. Черно-белая. Год - начало 1950х годов.",
+    "image": "",
+    "price": "1000.00",
+    "discount": "0.00",
+    "quantity": 1,
+    "category": 5
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 17,
+  "fields": {
+    "name": "Шуров и Рыкунин.",
+    "slug": "shurov-i-rykunin",
+    "description": "Пластинка. Исполнители - Шуров и Рыкунин. Год - 1950е годы.",
+    "image": "",
+    "price": "1000.00",
+    "discount": "0.00",
+    "quantity": 1,
+    "category": 6
+  }
+},
+{
+  "model": "goods.products",
+  "pk": 18,
+  "fields": {
+    "name": "Фотоаппарат Зенит",
+    "slug": "fotoapparat-zenit",
+    "description": "Фотоаппарат Зенит. Годы - 1950 -1960е годы. Для примера.",
+    "image": "",
+    "price": "20000.00",
+    "discount": "0.00",
+    "quantity": 1,
+    "category": 7
+  }
+}
+]
