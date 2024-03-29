@@ -15,4 +15,5 @@ class SiteInf1(models.Model):
         verbose_name_plural = 'Информация о магазине'
 
     def __str__(self):
-        return self
+        return self.name
+

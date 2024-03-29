@@ -21,6 +21,10 @@ from antiqshop import settings
 from main.views import index, about
 from django.conf.urls.static import static
 
+# from antiqshop import settings
+# from main.views import index, about
+# from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace='main')),

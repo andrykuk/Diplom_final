@@ -42,12 +42,17 @@ INSTALLED_APPS = [
     # 'django_extensions',
 
     'debug_toolbar',
-
     'main',
     'goods',
     'users',
     'carts',
     'orders'
+
+    # 'main',
+    # 'goods',
+    # 'users',
+    # 'carts',
+    # 'orders'
 ]
 
 MIDDLEWARE = [
