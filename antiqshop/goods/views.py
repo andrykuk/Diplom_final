@@ -1,7 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.views.generic import ListView
-
 from goods.models import Category, Products
 from goods.utils import q_search
 
@@ -13,54 +12,42 @@ class CatalogList(ListView):
     template_name = 'goods/catalog.html'
     context_object_name = 'goods'
     paginate_by = 3
-    ordering = ['id']
-    queryset = Products.objects.all()
-    extra_context = {
-        'title': 'Главная страница',
-        'goods': 'goods',
-        'slug_url': None,
-        # 'category': Category.objects.all()
-    }
 
-    def get_context_data(self, **kwargs):
+
+    def get_queryset(self, category_slug=None):
+        queryset = super().get_queryset()
+        category_slug = self.kwargs.get('category_slug')  # Получаем slug из
+        query = self.request.GET.get('q', None)
+        on_sale = self.request.GET.get('on_sale', None)
+        order_by = self.request.GET.get('order_by', None)
+        if category_slug == 'goods':
+            queryset = Products.objects.all()
+        elif query:
+            queryset = q_search(query)
+        else:
+            queryset = get_list_or_404(Products.objects.filter(category__slug=category_slug))
+        if on_sale:
+            queryset = queryset.filter(discount__gt=0)
+
+        if order_by and order_by != 'default':
+            queryset = queryset.order_by(order_by)
+        return queryset
+
+
+    def get_context_data(self, category_slug=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        category_slug = self.kwargs.get('category_slug')
         paginator = Paginator(context['object_list'], self.paginate_by)
-        dgr = paginator.page_range
         page = self.request.GET.get('page', 1)
+        query = self.request.GET.get('q', None)
+        if query:
+            goods = q_search(query)
         # current_page = paginator.page(int(page))
+        context['title'] = 'Главная страница'
         context['goods'] = paginator.get_page(page)
         # context['goods'] = current_page
+        context['slug_url'] = category_slug
         return context
-
-a = 10
-
-# def catalog(request, category_slug=None):
-#     page = request.GET.get('page', 1)
-#     on_sale = request.GET.get('on_sale', None)
-#     order_by = request.GET.get('order_by', None)
-#     query = request.GET.get('q', None)
-#
-#     if category_slug == 'goods':
-#         goods = Products.objects.all()
-#     elif query:
-#         goods = q_search(query)
-#     else:
-#         goods = get_list_or_404(Products.objects.filter(category__slug=category_slug))
-#     if on_sale:
-#         goods = goods.filter(discount__gt=0)
-#     if order_by and order_by != 'default':
-#         goods = goods.order_by(order_by)
-#     paginator = Paginator(goods, 3)
-#     current_page = paginator.page(int(page))
-#     # doods = Products.objects.all()
-#     context = {
-#         'title': 'Главная страница',
-#         'goods': current_page,
-#         'slug_url': category_slug,
-#         # 'category': Category.objects.all()
-#     }
-#
-#     return render(request, 'goods/catalog.html', context)
 
 
 def product(request, product_slug):
