@@ -107,6 +107,7 @@
                     {% endif %}
                     <a href="{% url 'cart:cart_add' %}" class="btn add-to-cart" data-product-id="{{ item.id }}">
                         {% csrf_token %}
+                        <p>{{ item.id }}</p>
                         <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
                              width="20" height="40">
                     </a>

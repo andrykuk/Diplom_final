@@ -67,7 +67,7 @@ $(document).ready(function () {
          var cart_id = $(this).data("cart-id");
          // Из атрибута href берем ссылку на контроллер django
          var remove_from_cart = $(this).attr("href");
-    
+
          // делаем post запрос через ajax не перезагружая страницу
          $.ajax({
 
@@ -152,7 +152,7 @@ $(document).ready(function () {
                  quantity: quantity,
                  csrfmiddlewaretoken: $("[name=csrfmiddlewaretoken]").val(),
              },
- 
+
              success: function (data) {
                   // Сообщение
                  successMessage.html(data.message);
@@ -161,7 +161,7 @@ $(document).ready(function () {
                  setTimeout(function () {
                       successMessage.fadeOut(400);
                  }, 7000);
- 
+
                  // Изменяем количество товаров в корзине
                  var goodsInCartCount = $("#goods-in-cart-count");
                  var cartCount = parseInt(goodsInCartCount.text() || 0);
@@ -211,3 +211,61 @@ $(document).ready(function () {
         }
     });
 });
+
+//document.addEventListener('DOMContentLoaded', function() {
+//    // Получаем элемент для оповещений
+//    var successMessage = document.getElementById('jq-notification');
+//
+//    // Обработчик клика на все кнопки "Добавить в корзину"
+//    document.addEventListener('click', function(e) {
+//        if (e.target && e.target.classList.contains('add-to-cart')) {
+//            e.preventDefault();
+//
+//            var goodsInCartCount = document.getElementById('goods-in-cart-count');
+//            var cartCount = parseInt(goodsInCartCount.textContent || '0');
+//
+//            // Получаем id товара из атрибута data-product-id
+//            var product_id = e.target.getAttribute('data-product-id');
+//            console.log(product_id)
+//
+//            // Получаем ссылку на действие добавления в корзину
+//            var add_to_cart_url = e.target.getAttribute('href');
+//            console.log(add_to_cart_url)
+//
+//            // Токен CSRF для безопасной отправки формы
+//            var csrfmiddlewaretoken = document.querySelector("[name=csrfmiddlewaretoken]").value;
+//            console.log(csrfmiddlewaretoken)
+//
+//            // Выполняем POST запрос с использованием Fetch API
+//            fetch(add_to_cart_url, {
+//                method: 'POST',
+//                headers: {
+//                    'Content-Type': 'application/json;charset=utf-8',
+//                },
+////                body: 'product_id=' + product_id + '&csrfmiddlewaretoken=' + csrfmiddlewaretoken,
+//                body: JSON.stringify({
+//                  product_id: product_id,
+//                  csrfmiddlewaretoken: csrfmiddlewaretoken,
+//                })
+//
+//            })
+//            .then(response => response.json())
+//            .then(data => {
+//                successMessage.innerHTML = data.message;
+//                successMessage.style.display = 'block';
+//                setTimeout(function () {
+//                    successMessage.style.display = 'none';
+//                }, 7000);
+//
+//                cartCount++;
+//                goodsInCartCount.textContent = cartCount;
+//
+//                var cartItemsContainer = document.getElementById('cart-items-container');
+//                cartItemsContainer.innerHTML = data.cart_items_html;
+//            })
+//            .catch(error => {
+//                console.error('Ошибка при добавлении товара в корзину', error);
+//            });
+//        }
+//    });
+//});

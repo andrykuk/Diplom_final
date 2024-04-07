@@ -1,16 +1,18 @@
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
-
 from carts.models import Cart
 from carts.utils import get_user_carts
 from goods.models import Products
 
 
 def cart_add(request):
+    # queryset = Products.objects.all()
     product_id = request.POST.get('product_id')
-
+    # product_id = request.POST
+    # a = 20
     product = Products.objects.get(id=product_id)
+    a = 10
     if request.user.is_authenticated:
         carts = Cart.objects.filter(user=request.user, product=product)
         if carts.exists():

@@ -9,6 +9,7 @@ from goods.utils import q_search
 
 class CatalogList(ListView):
     model = Products
+    queryset = Products.objects.all()
     template_name = 'goods/catalog.html'
     context_object_name = 'goods'
     paginate_by = 3
