@@ -1,3 +1,4 @@
+import json 
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
@@ -16,29 +17,41 @@ def cart_add(request):
     if request.user.is_authenticated:
         carts = Cart.objects.filter(user=request.user, product=product)
         if carts.exists():
+            no_cart = 1
             cart = carts.first()
-            if cart:
-                cart.quantity += 1
-                cart.save()
+            # if cart:
+            #     cart.quantity += 1
+            #     cart.save()
         else:
+            no_cart = 2
             Cart.objects.create(user=request.user, product=product, quantity=1)
     else:
         carts = Cart.objects.filter(session_key=request.session.session_key, product=product)
         if carts.exists():
+            no_cart = 1
             cart = carts.first()
-            if cart:
-                cart.quantity += 1
-                cart.save()
+            # if cart:
+            #     cart.quantity += 1
+            #     cart.save()
         else:
+            no_cart = 2
             Cart.objects.create(session_key=request.session.session_key, product=product, quantity=1)
     # return redirect(request.META['HTTP_REFERER'])
     user_cart = get_user_carts(request)
     cart_items_html = render_to_string(
         'carts/includes/include_cart.html', {'carts': user_cart}, request=request)
-    response_data ={
-        'message': 'Добавлено в корзину',
-        'cart_items_html': cart_items_html,
-    }
+    if no_cart == 1:
+        response_data ={
+            'message': 'Товар в единственном числе',
+            'cart_items_html': cart_items_html,
+            'no_cart': no_cart,
+        }
+    else:
+        response_data ={
+            'message': 'Добавлено в корзину',
+            'cart_items_html': cart_items_html,
+            'no_cart': no_cart,
+        }
     return JsonResponse(response_data)
 
 

@@ -99,11 +99,6 @@
                         {% include 'carts/includes/include_cart.html' %}
                         <!-- Закончилась разметка корзины -->
                     </div>
-<!--                    {% if carts %}-->
-<!--                        <a class="btn btn-dark" href="../orders/create_order.html">-->
-<!--                            Оформить заказ-->
-<!--                        </a>-->
-<!--                    {% endif %}-->
                 </div>
             </div>
             <!-- Оформленные заказы -->
@@ -140,18 +135,14 @@
                                             <tr>
                                                 <td><a class="text-white" href="{% url 'goods:product' item.product.slug %}">{{ item.product.name }}</a></td>
                                                 <td>{{ item.quantity }}</td>
-                                                <td>{{ item.price }} $</td>
-                                                <td>{{ item.products_price }} $</td>
+                                                <td>{{ item.price }} рублей</td>
+                                                <td>{{ item.products_price }} рублей</td>
 
                                             </tr>
                                             {% endfor %}
                                             </tbody>
                                         </table>
-<!--                                        <div class="d-flex justify-content-between">-->
-<!--                                            <p><strong>Итого:</strong></p>-->
-<!--                                            <p><strong>255.00 $</strong></p>-->
 
-<!--                                        </div>-->
                                     </div>
                                 </div>
                             </div>
